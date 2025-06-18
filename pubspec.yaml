@@ -1,0 +1,32 @@
+name: birthdayreminderlast_10
+description: A birthday reminder application.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  intl: ^0.20.2
+  firebase_core: ^3.14.0
+  firebase_auth: ^5.6.0
+  supabase_flutter: ^2.3.4
+  shared_preferences: ^2.2.2 
+  google_sign_in: ^6.1.6
+  flutter_local_notifications: ^19.2.1
+  device_preview: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

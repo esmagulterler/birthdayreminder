@@ -1,0 +1,54 @@
+# Flutter files
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.vscode/
+/build/
+.dart_tool/
+.idea/
+
+# IDE files
+.classpath
+.project
+.settings/
+*.iml
+*.ipr
+*.iws
+
+# macOS
+.DS_Store
+
+# Windows
+thumbs.db
+
+# Android
+/android/.gradle
+/android/local.properties
+/android/.idea
+/android/build/
+
+# iOS
+/ios/.symlinks
+/ios/.bundle
+
+# Web
+/web/build/
+
+# Firebase (if applicable and not checked into VCS)
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+.firebaserc.local
+
+# Other
+*.log
+*.stackdump
+*.suo
+*.user
+*.vshost
+*.bak
+*.obj
+*.pdb
+*.tmp
+*~
+*# 

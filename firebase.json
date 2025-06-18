@@ -1,0 +1,15 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {}
+      },
+      "ios": {
+        "default": {}
+      },
+      "web": {
+        "default": {}
+      }
+    }
+  }
+} 

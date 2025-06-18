@@ -104,56 +104,7 @@ flutterfire configure
 <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.googleusercontent.com">
 ```
 
-### 5. Supabase Yapılandırması
 
-#### Supabase Console
-1. [Supabase](https://supabase.com/) → Yeni proje oluştur
-2. **SQL Editor**'da aşağıdaki tabloyu oluşturun:
-
-```sql
--- Doğum günleri tablosu
-CREATE TABLE birthdays (
-    id BIGSERIAL PRIMARY KEY,
-    user_id TEXT NOT NULL,
-    name TEXT NOT NULL,
-    birthday_date DATE NOT NULL,
-    note TEXT DEFAULT '',
-    created_at TIMESTAMPTZ DEFAULT NOW(),
-    updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Güncellenme zamanını otomatik güncelle
-CREATE OR REPLACE FUNCTION update_updated_at_column()
-RETURNS TRIGGER AS $$
-BEGIN
-    NEW.updated_at = NOW();
-    RETURN NEW;
-END;
-$$ language 'plpgsql';
-
-CREATE TRIGGER update_birthdays_updated_at 
-    BEFORE UPDATE ON birthdays
-    FOR EACH ROW 
-    EXECUTE FUNCTION update_updated_at_column();
-
--- Row Level Security (RLS) - Şimdilik kapalı
-ALTER TABLE birthdays DISABLE ROW LEVEL SECURITY;
-
--- İndeksler (performans için)
-CREATE INDEX IF NOT EXISTS birthdays_user_id_idx ON birthdays(user_id);
-CREATE INDEX IF NOT EXISTS birthdays_birthday_date_idx ON birthdays(birthday_date);
-```
-
-#### Supabase Config
-`lib/main.dart` dosyasında Supabase URL ve anon key'i güncelleyin:
-```dart
-await Supabase.initialize(
-  url: 'YOUR_SUPABASE_URL',
-  anonKey: 'YOUR_SUPABASE_ANON_KEY',
-);
-```
-
-## 🖥️ Çalıştırma
 
 ### Web
 ```bash

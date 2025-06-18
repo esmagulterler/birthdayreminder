@@ -154,6 +154,7 @@ Kullanıcı	E-Posta	    Şifre	   User UID	                     Oluşturulma Tar
 ⚠️ Not: Bu kullanıcılar sadece test amaçlı oluşturulmuştur.
 
 
+BU PROJE ESMANUR GÜLTERLER TARAFINDAN OLUŞTURULMUŞTUR.
 
 ## 📞 İletişim
 

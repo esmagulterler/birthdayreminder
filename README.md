@@ -48,19 +48,52 @@ Sevdiklerinizin doğum günlerini unutmayın! Modern Flutter tabanlı doğum gü
 - **Supabase** - Database (PostgreSQL)
 - **Firebase Core** - App configuration
 
-### Packages
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  firebase_core: ^3.8.0
-  firebase_auth: ^5.3.3
-  google_sign_in: ^6.2.0
-  supabase_flutter: ^2.9.3
-  intl: ^0.19.0
-  flutter_localizations:
-    sdk: flutter
-```
+📄 Uygulama Sayfaları ve İşlevleri
+Ana Sayfa (home_page.dart)
+Kullanıcı giriş yaptıktan sonra karşısına çıkan ilk sayfadır. Uygulamadaki genel navigasyon bu sayfa üzerinden sağlanır.
+
+Doğum Günleri Sayfası (birthdays_page.dart)
+Kullanıcının eklediği doğum günü listelerini görüntülediği sayfadır. Buradan doğum günü yönetimi yapılabilir.
+
+Doğum Günü Ekleme Sayfası (add_birthday_page.dart)
+Yeni doğum günü eklemek için kullanılır. İsim, tarih gibi bilgiler bu sayfa üzerinden kaydedilir.
+
+Giriş Sayfası (login_page.dart)
+Kullanıcıların e-posta ve şifre ile giriş yapabildiği sayfadır. Firebase kimlik doğrulaması burada kullanılır.
+
+Kayıt Olma Sayfası (register_page.dart)
+Yeni kullanıcıların hesap oluşturabileceği sayfa. Firebase ile entegre çalışır.
+
+Profil Sayfası (profile_page.dart)
+Kullanıcı bilgilerini görüntüleyebileceği ve düzenleyebileceği sayfa.
+
+Ayarlar Sayfası (settings_page.dart)
+Tema yönetimi, bildirim ayarları gibi kişisel tercihler burada düzenlenebilir.
+
+Bildirimler Sayfası (notifications_page.dart)
+Kullanıcıya gönderilmiş doğum günü bildirimleri burada görüntülenir.
+
+⚙️ Uygulama İç Yapısı ve Yardımcı Bileşenler
+Ana Uygulama (main.dart)
+Uygulamanın başlangıç noktasıdır. Tema ve yönlendirme işlemleri burada tanımlıdır.
+
+Kayıt Modeli (register.dart)
+Kullanıcı kayıt işlemlerinde kullanılan yardımcı yapılar burada bulunur.
+
+Kullanıcı Yerel Veritabanı (user_local_db.dart)
+Kullanıcının yerel cihazında saklanacak verileri yönetir.
+
+Kullanıcı Yerel Depolama Servisi (user_local_storage.dart)
+SharedPreferences veya benzeri yöntemlerle kullanıcı verilerini cihazda saklamaya yardımcı olur.
+
+Temel Sayfa Yapısı (base_page.dart)
+Sayfalar için ortak yapı ve düzen bileşenleri içerir.
+
+Yan Menü (drawer_menu.dart)
+Uygulama içi gezintide kullanılan açılır menü yapısı.
+
+Widgetlar (widgets/...)
+Uygulamada tekrar kullanılan özel butonlar, kartlar ve benzeri bileşenler burada bulunur.
 
 ## 🚀 Kurulum
 
@@ -71,55 +104,6 @@ dependencies:
 - Firebase Account
 - Supabase Account
 
-### 2. Proje Klonlama
-```bash
-git clone <repository-url>
-cd birthdayreminder
-```
-
-### 3. Dependencies Yükleme
-```bash
-flutter pub get
-```
-
-### 4. Firebase Yapılandırması
-
-#### Firebase Console
-1. [Firebase Console](https://console.firebase.google.com/) → Yeni proje oluştur
-2. **Authentication** → **Sign-in method** → Enable:
-   - Email/Password
-   - Google
-   - GitHub (opsiyonel)
-
-#### Firebase Config
-`lib/firebase_options.dart` dosyasını Firebase CLI ile oluşturun:
-```bash
-firebase login
-flutterfire configure
-```
-
-#### Web için Google Client ID
-`web/index.html` dosyasına Google Client ID ekleyin:
-```html
-<meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.googleusercontent.com">
-```
-
-
-
-### Web
-```bash
-flutter run -d chrome
-```
-
-### Android
-```bash
-flutter run
-```
-
-### iOS
-```bash
-flutter run -d ios
-```
 
 ## 📱 Uygulama Yapısı
 
@@ -152,16 +136,6 @@ lib/
 | `created_at` | TIMESTAMPTZ | Oluşturulma zamanı |
 | `updated_at` | TIMESTAMPTZ | Güncellenme zamanı |
 
-## 🔐 Authentication Flow
-
-```
-Login Page → Firebase Auth → Home Page
-     ↓
-   Success → Supabase ile veri operations
-     ↓
-   Logout → Clear session & return to Login
-```
-
 ## 🎯 Kullanım
 
 1. **Kayıt/Giriş**: Email/şifre, Google veya GitHub ile
@@ -170,51 +144,12 @@ Login Page → Firebase Auth → Home Page
 4. **Düzenleme**: Doğum günü kartındaki butonları kullanın
 5. **İstatistikler**: Ana sayfada özet bilgileri görün
 
-## ⚠️ Bilinen Problemler
 
-- GitHub login sadece web platformunda çalışır
-- RLS (Row Level Security) şu anda kapalı - güvenlik için etkinleştirin
-- Bildirimler henüz implement edilmemiş
 
-## 🛠️ Geliştirme
-
-### Debug Mode
-```bash
-flutter run --debug
-```
-
-### Release Build
-```bash
-# Android
-flutter build apk --release
-
-# Web
-flutter build web --release
-
-# iOS
-flutter build ios --release
-```
-
-### Testing
-```bash
-flutter test
-```
-
-## 📄 License
-
-MIT License - Detaylar için [LICENSE](LICENSE) dosyasını görün.
-
-## 👥 Katkıda Bulunma
-
-1. Fork edin
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit edin (`git commit -m 'Add amazing feature'`)
-4. Push edin (`git push origin feature/amazing-feature`)
-5. Pull Request açın
 
 ## 📞 İletişim
 
-Sorularınız için issue açabilirsiniz.
+Sorularınız için bize ulaşabilirsiniz.
 
 ---
 

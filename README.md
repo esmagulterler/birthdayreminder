@@ -149,7 +149,7 @@ Test amacıyla oluşturulmuş örnek kullanıcı hesapları aşağıda verilmiş
 
 KULLANICILAR:
 
-E-POSTA:hgencoglu@gmail.com	ŞİFRE: 123456	USER UID: 9DfJcSjrTvW0tNQyB5fcskhvaG62	EKLENME TARİHİ: 18.06.2025
+E-POSTA:hgencoglu@hotmail.com	ŞİFRE: 123456	USER UID: 9DfJcSjrTvW0tNQyB5fcskhvaG62	EKLENME TARİHİ: 18.06.2025
 E-POSTA:esma@gmail.com	    ŞİFRE: 123456  USER UID: 3tWyvQjW9KRAZ4O7Un9dgQWlwE83	 EKLENME TARİHİ: 18.06.2025
 
 ⚠️ Not: Bu kullanıcılar sadece test amaçlı oluşturulmuştur.
@@ -157,10 +157,8 @@ E-POSTA:esma@gmail.com	    ŞİFRE: 123456  USER UID: 3tWyvQjW9KRAZ4O7Un9dgQWlwE
 
 BU PROJE ESMANUR GÜLTERLER TARAFINDAN OLUŞTURULMUŞTUR.
 
-## 📞 İletişim
 
-Sorularınız için bize ulaşabilirsiniz.
 
 ---
 
-### 🎉 Doğum günlerini unutmayın, sevdiklerinizi mutlu edin! 🎂 
+

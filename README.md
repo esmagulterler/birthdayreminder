@@ -147,9 +147,10 @@ lib/
 👤 Örnek Kullanıcılar
 Test amacıyla oluşturulmuş örnek kullanıcı hesapları aşağıda verilmiştir:
 
-Kullanıcı	E-Posta	    Şifre	   User UID	                     Oluşturulma Tarihi
-1	hgencoglu@gmail.com	123456	9DfJcSjrTvW0tNQyB5fcskhvaG62	   18.06.2025
-2	esma@gmail.com	    123456  3tWyvQjW9KRAZ4O7Un9dgQWlwE83	   18.06.2025
+KULLANICILAR:
+
+E-POSTA:hgencoglu@gmail.com	ŞİFRE: 123456	USER UID: 9DfJcSjrTvW0tNQyB5fcskhvaG62	EKLENME TARİHİ: 18.06.2025
+E-POSTA:esma@gmail.com	    ŞİFRE: 123456  USER UID: 3tWyvQjW9KRAZ4O7Un9dgQWlwE83	 EKLENME TARİHİ: 18.06.2025
 
 ⚠️ Not: Bu kullanıcılar sadece test amaçlı oluşturulmuştur.
 

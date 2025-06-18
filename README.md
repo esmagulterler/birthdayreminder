@@ -144,6 +144,14 @@ lib/
 4. **Düzenleme**: Doğum günü kartındaki butonları kullanın
 5. **İstatistikler**: Ana sayfada özet bilgileri görün
 
+👤 Örnek Kullanıcılar
+Test amacıyla oluşturulmuş örnek kullanıcı hesapları aşağıda verilmiştir:
+
+Kullanıcı	E-Posta	    Şifre	   User UID	                     Oluşturulma Tarihi
+1	hgencoglu@gmail.com	123456	9DfJcSjrTvW0tNQyB5fcskhvaG62	   18.06.2025
+2	esma@gmail.com	    123456  3tWyvQjW9KRAZ4O7Un9dgQWlwE83	   18.06.2025
+
+⚠️ Not: Bu kullanıcılar sadece test amaçlı oluşturulmuştur.
 
 
 
